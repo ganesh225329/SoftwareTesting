@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Admin Dashboard</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:40px;
+}
+
+table{
+border-collapse:collapse;
+width:90%;
+}
+
+th,td{
+border:1px solid black;
+padding:10px;
+text-align:center;
+}
+
+#editForm{
+display:none;
+margin-top:30px;
+border:1px solid black;
+padding:20px;
+width:300px;
+}
+
+#message{
+margin-top:20px;
+color:green;
+font-weight:bold;
+}
+
+</style>
+
+<script>
+
+function editProduct(name,price){
+
+document.getElementById("editForm").style.display="block";
+
+document.getElementById("productName").value=name;
+
+document.getElementById("price").value=price;
+
+}
+
+function saveProduct(){
+
+document.getElementById("message").innerHTML="Product Updated Successfully!";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>E-Commerce Admin Dashboard</h2>
+
+<table id="productTable">
+
+<tr>
+
+<th>Product</th>
+
+<th>Price</th>
+
+<th>Stock</th>
+
+<th>Action</th>
+
+</tr>
+
+<tr>
+
+<td>Laptop</td>
+
+<td>$90.75</td>
+
+<td>In Stock</td>
+
+<td>
+
+<button onclick="editProduct('Laptop','90.75')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Keyboard</td>
+
+<td>$37.2</td>
+
+<td>Out of Stock</td>
+
+<td>
+
+<button onclick="editProduct('Keyboard','37.2')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Monitor</td>
+
+<td>$19.5</td>
+
+<td>Out of Stock</td>
+
+<td>
+
+<button onclick="editProduct('Monitor','19.5')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>USB Cable</td>
+
+<td>$58.11</td>
+
+<td>Out of Stock</td>
+
+<td>
+
+<button onclick="editProduct('USB Cable','58.11')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Headphones</td>
+
+<td>$118.87</td>
+
+<td>Out of Stock</td>
+
+<td>
+
+<button onclick="editProduct('Headphones','118.87')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Smart Watch</td>
+
+<td>$84.73</td>
+
+<td>Out of Stock</td>
+
+<td>
+
+<button onclick="editProduct('Smart Watch','84.73')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Printer</td>
+
+<td>$159.59</td>
+
+<td>In Stock</td>
+
+<td>
+
+<button onclick="editProduct('Printer','159.59')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Router</td>
+
+<td>$13.73</td>
+
+<td>Out of Stock</td>
+
+<td>
+
+<button onclick="editProduct('Router','13.73')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>SSD</td>
+
+<td>$10.63</td>
+
+<td>In Stock</td>
+
+<td>
+
+<button onclick="editProduct('SSD','10.63')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Webcam</td>
+
+<td>$162.93</td>
+
+<td>Out of Stock</td>
+
+<td>
+
+<button onclick="editProduct('Webcam','162.93')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Wireless Mouse</td>
+
+<td>$25.00</td>
+
+<td>In Stock</td>
+
+<td>
+
+<button onclick="editProduct('Wireless Mouse','25.00')">
+
+Edit
+
+</button>
+
+</td>
+
+</tr>
+
+</table>
+
+<div id="editForm">
+
+<h3>Edit Product</h3>
+
+<label>Product Name</label><br>
+
+<input id="productName" readonly>
+
+<br><br>
+
+<label>Price</label><br>
+
+<input id="price">
+
+<br><br>
+
+<button id="saveButton" onclick="saveProduct()">
+
+Save
+
+</button>
+
+</div>
+
+<p id="message"></p>
+
+</body>
+
+</html>
