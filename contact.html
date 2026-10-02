@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <style>
+        body{
+            font-family: Arial;
+            margin:50px;
+        }
+
+        input, textarea{
+            width:300px;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            padding:10px 20px;
+            background:green;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        #success{
+            display:none;
+            color:green;
+            font-weight:bold;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Contact Form</h2>
+
+<form onsubmit="submitForm(); return false;">
+
+    <input type="text" id="name" placeholder="Enter Name" required><br>
+
+    <input type="email" id="email" placeholder="Enter Email" required><br>
+
+    <textarea id="message" placeholder="Enter Message"></textarea><br>
+
+    <button id="submitButton" type="submit">Submit</button>
+
+</form>
+
+<p id="success">
+Form submitted successfully!
+</p>
+
+<script>
+
+function submitForm(){
+
+document.getElementById("success").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>

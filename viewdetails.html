@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>View Details</title>
+
+<style>
+
+#spinner{
+display:block;
+color:red;
+font-size:22px;
+}
+
+#content{
+display:none;
+}
+
+</style>
+
+<script>
+
+function loadData(){
+
+setTimeout(function(){
+
+document.getElementById("spinner").style.display="none";
+
+document.getElementById("content").style.display="block";
+
+},3000);
+
+}
+
+window.onload=loadData;
+
+</script>
+
+</head>
+
+<body>
+
+<div id="spinner">
+
+Loading...
+
+</div>
+
+<div id="content">
+
+<h2 id="productName">Learn Headphones</h2>
+
+<p id="price">$63.03</p>
+
+<p id="rating">4.7 / 5</p>
+
+</div>
+
+</body>
+
+</html>
+
